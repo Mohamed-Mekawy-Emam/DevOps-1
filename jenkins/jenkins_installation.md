@@ -73,3 +73,11 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. Build job
 1. Check "console output"
 
+```sh
+To restart Jenkins manually, you can use either of the following commands (by entering their URL in a browser):
+
+(jenkins_url)/safeRestart - Allows all running jobs to complete. New jobs will remain in the queue to run after the restart is complete.
+
+(jenkins_url)/restart - Forces a restart without waiting for builds to complete
+
+```
