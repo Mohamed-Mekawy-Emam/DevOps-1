@@ -35,7 +35,18 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    # Setup Jenkins to start at boot,
    chkconfig jenkins on
    ```
+   
+   ```sh
+   
+   #on RedHat/CentOs 
+   # systemctl status jenkins.service
+   # systemctl start jenkins.service && systemctl enable jenkins.service
+   # netstat -tulpn | grep -i 8080
+   # firewall-cmd --list-all
+   # firewall-cmd --state
+   # firewall-cmd --permanent --add-port=8080/tcp
 
+   ```
    ### Accessing Jenkins
    By default jenkins runs at port `8080`, You can access jenkins at
    ```sh
