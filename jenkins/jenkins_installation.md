@@ -26,6 +26,24 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    #yum install java-11-openjdk-devel
    #yum install jenkins
    ```
+### Confirm Java Version
+Lets install java and set the java home
+```sh
+java -version
+find /usr/lib/jvm/java-* | head -n 3
+#JAVA_HOME=
+export JAVA_HOME
+PATH=$PATH:$JAVA_HOME
+# To set it permanently update your .bash_profile
+source ~/.bash_profile
+```
+_The output should be something like this,_
+```
+[root@~]# java -version
+openjdk version "11.0.15" 2022-04-19 LTS
+OpenJDK Runtime Environment 18.9 (build 11.0.15+9-LTS)
+OpenJDK 64-Bit Server VM 18.9 (build 11.0.15+9-LTS, mixed mode, sharing)
+```
 
    ### Start Jenkins
    ```sh
